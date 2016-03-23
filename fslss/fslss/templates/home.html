@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css"
+	rel="stylesheet">
+<title>梦境工厂</title>
+<link rel="Shortcut Icon" href="{{STATIC_URL}}images/dreamfactory.ico">
+<link rel="Bookmark" href="{{STATIC_URL}}images/dreamfactory.ico">
+<style>
+
+/* GLOBAL STYLES
+    -------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+	padding-bottom: 40px;
+	color: #5a5a5a;
+	margin-top: 40px;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+	margin-bottom: 60px;
+}
+
+.carousel .container {
+	position: relative;
+	z-index: 9;
+}
+
+.carousel-control {
+	height: 80px;
+	margin-top: 0;
+	font-size: 120px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+	background-color: transparent;
+	border: 0;
+	z-index: 10;
+}
+
+.carousel .item {
+	height: 500px;
+}
+
+.carousel img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 500px;
+}
+
+.carousel-caption {
+	background-color: transparent;
+	position: static;
+	max-width: 550px;
+	padding: 0 20px;
+	margin-top: 200px;
+}
+
+.carousel-caption h1,.carousel-caption .lead {
+	margin: 0;
+	line-height: 1.25;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+}
+
+.carousel-caption .btn {
+	margin-top: 10px;
+}
+
+/* Featurettes
+    ------------------------- */
+.featurette-divider {
+	margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.featurette {
+	padding-top: 120px;
+	/* Vertically center images part 1: add padding above and below text. */
+	overflow: hidden;
+	/* Vertically center images part 2: clear their floats. */
+}
+
+.featurette-image {
+	margin-top: -120px;
+	/* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+	margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+	margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+	font-size: 50px;
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -1px;
+}
+
+/* RESPONSIVE CSS
+    -------------------------------------------------- */
+@media ( max-width : 979px) {
+	.container.navbar-wrapper {
+		margin-bottom: 0;
+		width: auto;
+	}
+	.navbar-inner {
+		border-radius: 0;
+		margin: -20px 0;
+	}
+	.carousel .item {
+		height: 500px;
+	}
+	.carousel img {
+		width: auto;
+		height: 500px;
+	}
+	.featurette {
+		height: auto;
+		padding: 0;
+	}
+	.featurette-image.pull-left,.featurette-image.pull-right {
+		display: block;
+		float: none;
+		max-width: 40%;
+		margin: 0 auto 20px;
+	}
+}
+
+@media ( max-width : 767px) {
+	.navbar-inner {
+		margin: -20px;
+	}
+	.carousel {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.carousel .container {
+		
+	}
+	.carousel .item {
+		height: 300px;
+	}
+	.carousel img {
+		height: 300px;
+	}
+	.carousel-caption {
+		width: 65%;
+		padding: 0 70px;
+		margin-top: 100px;
+	}
+	.carousel-caption h1 {
+		font-size: 30px;
+	}
+	.carousel-caption .lead,.carousel-caption .btn {
+		font-size: 18px;
+	}
+	.marketing .span4+.span4 {
+		margin-top: 40px;
+	}
+	.featurette-heading {
+		font-size: 30px;
+	}
+	.featurette .lead {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+}
+</style>
+
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">梦境工厂</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/web/dreams">阅读</a></li>
+              <li><a href="#about">我的记录</a></li>
+              <li><a href="#contact">个人资料</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	<!-- Carousel
+    ================================================== -->
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="{{STATIC_URL}}images/s1.jpg" alt="">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>梦境工厂 &middot; 记录</h1>
+						<p class="lead">及时记下刚做过的梦，保存最真实的感觉。</p>
+						<a class="btn btn-large btn-primary" href="http://dreampy-media.stor.sinaapp.com/DreamFactory_web.apk">下载Android客户端</a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="{{STATIC_URL}}images/s2.jpg" alt="">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>梦境工厂 &middot; 分享</h1>
+						<p class="lead">将做过的梦与他人分享，收获更多惊喜。</p>
+						<a class="btn btn-large btn-primary" href="http://dreampy-media.stor.sinaapp.com/DreamFactory_web.apk">下载Android客户端</a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="{{STATIC_URL}}images/s3.jpg" alt="">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>梦境工厂 &middot; 回味</h1>
+						<p class="lead">当你回过头来看一眼时，美梦已然成真。</p>
+						<a class="btn btn-large btn-primary" href="http://dreampy-media.stor.sinaapp.com/DreamFactory_web.apk">下载Android客户端</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+	<!-- /.carousel -->
+
+	<div class="container marketing">
+		<!-- START THE FEATURETTES -->
+		<div class="featurette">
+			<img class="featurette-image pull-right"
+				src="{{STATIC_URL}}images/screen-drawer.png">
+			<h2 class="featurette-heading">
+				功能， <span class="muted">简明扼要。</span>
+			</h2>
+			<p class="lead">没有冗余的功能，没有繁杂的操作，流畅体验，极简操作。点评他人的梦，分享自己的梦。在大厅可以对其他人的梦进行评论和“赞”，碰到有意思的梦，疯狂得赞吧！</p>
+		</div>
+
+		<hr class="featurette-divider">
+
+		<div class="featurette">
+			<img class="featurette-image pull-left"
+				src="{{STATIC_URL}}images/screen-add.png">
+			<h2 class="featurette-heading">
+				记录，<span class="muted">梦里的点点滴滴。</span>
+			</h2>
+			<p class="lead">写下你的梦，把最真实的感觉留在这里，无论什么时候，回味时的感觉总是那么美妙。</p>
+		</div>
+
+		<hr class="featurette-divider">
+
+		<div class="featurette">
+			<img class="featurette-image pull-right"
+				src="{{STATIC_URL}}images/screen-main.png">
+			<h2 class="featurette-heading">
+				Holo，<span class="muted">原汁原味的Android风格。</span>
+			</h2>
+			<p class="lead">最时髦的效果搭配极度流畅的操作体验，这里不单单是记梦，拿在手里把玩就是一种享受。</p>
+		</div>
+
+		<hr class="featurette-divider">
+		<!-- FOOTER -->
+		<footer>
+			<div class="row">
+				<div class="span4 text-center">
+					<h4 class="text-info"><abbr title="关注官方微信，回复“看梦”有惊喜！">微信二维码</abbr></h4>
+					<img alt="" src="{{STATIC_URL}}images/qrcode_weixin.jpg" />
+				</div>
+				<div class="span7">
+					<p>
+						<a href="http://weibo.com/u/3776836811" target="_blank"><img
+							alt="" src="{{STATIC_URL}}images/logo_weibo_16x16.png" /></a>
+					</p>
+					<p>&copy; 2014 &middot; Powered by Bootstrap</p>
+				</div>
+				<div class="span1">
+					<p class="pull-right">
+						<a href="#">回到顶部</a>
+					</p>
+				</div>
+			</div>
+
+
+		</footer>
+
+	</div>
+	<!-- /.container -->
+	<!-- /END THE FEATURETTES -->
+
+	<!-- javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="{{STATIC_URL}}jquery/jquery-1.10.2.js"></script>
+	<script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		!function($) {
+			$(function() {
+				// carousel demo
+				$('#myCarousel').carousel();
+			});
+		}(window.jQuery);
+	</script>
+</body>
+</html>

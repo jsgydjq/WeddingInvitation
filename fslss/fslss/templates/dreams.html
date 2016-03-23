@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head> 
+  <title>梦境工厂</title> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="description" content="" /> 
+  <meta name="author" content="Tenpage" /> 
+  <!-- 最新 Bootstrap 核心 CSS 文件 --> 
+  <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" /> 
+  <link rel="Shortcut Icon" href="{{STATIC_URL}}images/dreamfactory.ico" /> 
+  <link rel="Bookmark" href="{{STATIC_URL}}images/dreamfactory.ico" /> 
+  <link rel="stylesheet" href="{{STATIC_URL}}css/main.css" /> 
+</head> 
+<body> 
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+   <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display --> 
+    <div class="navbar-header"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" href="/">梦境工厂</a> 
+   </div> 
+   <!-- Collect the nav links, forms, and other content for toggling --> 
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+     <ul class="nav navbar-nav"> 
+      <li class="active"><a href="/web/dreams">阅读</a></li> 
+      <li><a href="#">我的记录</a></li> 
+      <li><a href="#">个人资料</a></li> 
+    </ul> 
+    <ul class="nav navbar-nav navbar-right"> 
+      <li>
+        <a href="#">关于
+        </a>
+      </li> 
+    </ul> 
+  </div> 
+  <!-- /.navbar-collapse --> 
+</div> 
+</nav> 
+<div class="df-middle">
+  <div class="container">
+    {% for item in dreams %} 
+    <div class="row"> 
+      <div class="col-xs-12"> 
+       <div class="thumbnail"> 
+        <div class="df-dream-list-head">
+        <table> 
+         <tbody> 
+          <tr> 
+           <td rowspan="2" class="df-list-header-avatar"> <img class="img-rounded df-avatar-list lazy" src="{{STATIC_URL}}images/webapp/ic_avartar_default.jpg" data-src="{{item.user_avatar}}" onerror="this.src='{{STATIC_URL}}images/webapp/ic_avartar_default.jpg'" /> </td> 
+           <td> <b>{{ item.username }}</b> </td> 
+         </tr> 
+         <tr> 
+           <td> <small>{{ item.create_time }}</small> </td> 
+         </tr> 
+       </tbody> 
+       <tbody> 
+       </tbody> 
+     </table> 
+     <div class="df-list-content"> 
+       <p> {{ item.content }} </p> 
+     </div> 
+     <div class="row"> 
+      <div class="col-xs-12">
+        <button type="button" class="btn btn-default df-list-foot-left">赞 ({{item.up_num}})</button>
+        <a type="button" class="btn btn-default df-list-foot-right" href="dream_detail?did={{item.did}}">评论 ({{item.comment_num}})</a>
+      </div>
+    </div>
+  </div> 
+</div> 
+
+</div> 
+</div> {% endfor %} 
+<div class="row"> 
+  <div class="col-xs-12"> 
+   <ul class="pager">
+     {% if dreams_queryset.has_previous %} 
+     <li class="previous"><a href="?page={{ dreams_queryset.previous_page_number }}">← 上一页</a></li> {% else %} 
+     <li class="previous disabled"><a href="javascript:void(0)">← 上一页</a></li> {% endif %} {% if dreams_queryset.has_next %} 
+     <li class="next"><a href="?page={{ dreams_queryset.next_page_number }}">下一页 →</a></li> {% else %} 
+     <li class="next disabled"><a href="javascript:void(0)">下一页 →</a></li> {% endif %} 
+   </ul> 
+ </div> 
+</div> 
+</div> 
+</div>
+<!--footer -->  
+{% include 'footer.html' %}
+  <!-- Bootstrap core JavaScript
+  ================================================== --> 
+  <!-- Placed at the end of the document so the pages load faster --> 
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 --> 
+  <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script> 
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 --> 
+  <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+  <!--延迟加载--> 
+  <script src="http://cdn.bootcss.com/unveil/1.3.0/jquery.unveil.min.js"></script> 
+  <script>
+  $(document).ready(function(){
+    $("img.lazy").unveil();      
+  });
+  </script>  
+</body>
+</html>

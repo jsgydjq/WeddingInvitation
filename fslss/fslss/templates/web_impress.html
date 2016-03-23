@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+
+  <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+  <meta name="author" content="Bartek Szopka" />
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{STATIC_URL}}css/impress.css">
+  <link rel="stylesheet" href="{{STATIC_URL}}css/heart_css.css">
+
+<link rel="stylesheet" href="impress.css">
+<link rel="stylesheet" href="heart_css.css">
+
+<link rel="shortcut icon" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+  <p>您的浏览器 <b>不支持</b> impress.js的展示要求, 将为您呈现简化版的展示</p>
+  <p>为了获取最佳效果，请使用最新版的<b>Chrome</b>, <b>Safari</b> 或 <b>Firefox</b> 浏览器</p>
+  <p>珍爱生命，保护地球，远离IE。</p>
+</div>
+
+
+<div id="impress">
+
+<div id="welcome" class="step heart-line" data-x="0" data-y="0" data-z="-2000" data-rotate-x="90">
+  <q><(￣▽￣)> 哇哈哈…欢迎光临我们的小站</q>
+</div>
+
+<div id="heart-line-1" class="step heart-line" data-x="0" data-y="0">
+  <p>
+    我们是范硕&李思斯
+  </p>
+</div>
+
+<div id="heart-line-2" class="step heart-line" data-x="853" data-y="353" data-rotate="45">
+  <p>
+    2009年<b class="san">3</b>月<b class="shiqi">17</b>日，我们在大学相恋
+  </p>
+</div>
+
+<div id="heart-line-3" class="step heart-line" data-x="1559" data-y="353" data-rotate="-45">
+  <p>
+    一块儿吃饭，一块儿溜达。。不知不觉毕业了
+  </p>
+</div>
+
+<div id="heart-line-4" class="step heart-line" data-x="2414" data-y="0">
+  <p>
+    2014年<b class="san">3</b>月<b class="shiqi">17</b>日，时隔5年，我们领证啦！
+  </p>
+</div>
+
+<div id="heart-line-5" class="step heart-line" data-x="3268" data-y="353" data-rotate="45">
+  <p>
+    5年 = 60个月 = 1826天
+  </p>
+</div>
+
+<div id="heart-line-6" class="step heart-line" data-x="3621" data-y="1206" data-rotate="90">
+  <p>
+    = 4万小时，262万分钟，1亿5千万秒...
+  </p>
+</div>
+
+<div id="heart-line-7" class="step heart-line" data-x="2414" data-y="2914" data-rotate="135" data-scale="3.414">
+  <p>
+    我们珍惜在一起的每一分、每一秒
+  </p>
+</div>
+
+<div id="heart-line-8" class="step heart-line" data-x="0" data-y="2914" data-rotate="225" data-scale="3.414">
+  <p>
+    还剩最后的<span id="t_d">d</span>天<span id="t_h">h</span>小时<span id="t_m">m</span>分钟<span id="t_s">s</span>秒
+  </p>
+</div>
+
+<div id="heart-line-9" class="step heart-line" data-x="-1207" data-y="1206" data-rotate="270">
+  <p>
+    都有点迫不及待了，O(∩_∩)O哈哈~
+  </p>
+</div>
+
+<div id="heart-line-10" class="step heart-line" data-x="-853" data-y="353" data-rotate="315">
+  <p>
+    想想还有点小激动呢
+  </p>
+</div>
+
+<!--
+<div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+  <p>333333 <strong>33333333333</strong> <br/>
+    333333333333333333 <a href="http://prezi.com">prezi.com</a> <br/>
+    3333333333333333 <strong>33333333333333333333333333333333333</strong> in modern browsers.</p>
+  </div>
+
+  <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+    <p>44444444444444 <b>big</b> <span class="thoughts">44444444444</span></p>
+  </div>
+
+
+<div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+  <p>and <b>tiny</b> ideas</p>
+</div>
+
+
+<div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+  <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+</div>
+
+<div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+  <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+</div>
+
+<div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+  <p>want to know more?</p>
+  <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+</div>
+
+<div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="5">
+  <p>one more thing...</p>
+</div>
+
+
+<div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+  <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+  <span class="footnote">* beat that, prezi ;)</span>
+</div>
+ -->
+ <div id="overview-1" class="step heart-line" data-x="-3000" data-y="2000" data-z="1500" data-rotate="360" data-rotate-y="-45" data-scale="5">
+   <p>
+     感谢您关注我们的婚礼，O(∩_∩)O谢谢！
+   </p>
+ </div>
+
+<div id="overview" class="step" data-x="1207" data-y="1207" data-scale="10">
+</div>
+
+</div>
+
+<div class="hint">
+  <p>使用空格或方向键继续</p>
+</div>
+<script>
+  if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>在左侧或右侧点击继续</p>";
+  }
+
+  function GetRTime(){
+    var EndTime= new Date('2014/12/07 12:00:00');
+    var NowTime = new Date();
+    var t =EndTime.getTime() - NowTime.getTime();
+    var d=Math.floor(t/1000/60/60/24);
+    var h=Math.floor(t/1000/60/60%24);
+    var m=Math.floor(t/1000/60%60);
+    var s=Math.floor(t/1000%60);
+    if(d<10)d="0"+d;
+    if(h<10)h="0"+h;
+    if(m<10)m="0"+m;
+    if(s<10)s="0"+s;
+    document.getElementById("t_d").innerHTML = d ;
+    document.getElementById("t_h").innerHTML = h ;
+    document.getElementById("t_m").innerHTML = m ;
+    document.getElementById("t_s").innerHTML = s ;
+  }
+    setInterval(GetRTime,1000);
+</script>
+<script src="http://cdn.bootcss.com/impress.js/0.5.3/impress.min.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

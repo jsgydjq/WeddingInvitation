@@ -1,0 +1,10 @@
+name: fslss
+version: 1
+libraries:
+- name: "django"
+  version: "1.5"
+handle:
+- expire:  if( path ~ "1" ) time 11
+handlers:
+- url: /static
+  static_path: ./fslss/static
